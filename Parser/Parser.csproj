@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pathoschild.NaturalTimeParser.Parser</RootNamespace>
     <AssemblyName>Pathoschild.NaturalTimeParser.Parser</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -32,9 +32,6 @@
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="Parser.nuspec" />
   </ItemGroup>

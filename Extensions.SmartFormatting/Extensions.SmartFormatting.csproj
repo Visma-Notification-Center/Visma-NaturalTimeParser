@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pathoschild.NaturalTimeParser.Extensions.SmartFormatting</RootNamespace>
     <AssemblyName>Pathoschild.NaturalTimeParser.Extensions.SmartFormatting</AssemblyName>
-     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -41,14 +41,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SmartFormat">
-      <HintPath>..\packages\SmartFormat.NET.1.0.0.0\lib\net35-Client\SmartFormat.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
+	<PackageReference Include="SmartFormat.NET" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Extensions.SmartFormatting.nuspec" />
-    <None Include="packages.config" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

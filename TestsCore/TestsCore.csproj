@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64DEDE41-461D-4FBE-9851-C71A77A2CD78}</ProjectGuid>
+    <ProjectGuid>{5B130AB4-749A-4B1A-A07F-C462C6D046DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pathoschild.NaturalTimeParser.Extensions.DotLiquid</RootNamespace>
-    <AssemblyName>Pathoschild.NaturalTimeParser.Extensions.DotLiquid</AssemblyName>
-    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <RootNamespace>Pathoschild.NaturalTimeParser.Tests</RootNamespace>
+    <AssemblyName>Pathoschild.NaturalTimeParser.Tests</AssemblyName>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -35,23 +35,14 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Extensions.DotLiquid.nuspec" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <PackageReference Include="DotLiquid">
-      <Version>1.7.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-    <PackageReference Include="DotLiquid">
-      <Version>2.0.366</Version>
-    </PackageReference>
+    <PackageReference Include="DotLiquid" Version="2.0.366" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Parser\Parser.csproj">
-      <Project>{5f4a5633-aa16-4944-b344-3e6ec55eb9e4}</Project>
-      <Name>Parser</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Extensions.DotLiquid\Extensions.DotLiquid.csproj" />
+    <ProjectReference Include="..\Parser\Parser.csproj" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
